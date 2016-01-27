@@ -363,5 +363,11 @@ ISR(PCINT2_vect){
 
 int main(void) {
 	setup();
-	while(1);
+	while(1) {
+		if (bit_is_clear(PIND, PD2)) {
+			PORTB &= ~(1<<PB5);
+		} else {
+			PORTB |=  (1<<PB5);
+		};
+	};
 }
