@@ -304,10 +304,14 @@ void broadcast() {
 			}
 		}
 		if(match == 0) {
-			plstypes[p++] = codes[i];
-			/* See above */
-			if((i%2) == 1) {
-				putByte(48+p-1);
+			if (p < MAX_PULSE_TYPES) {
+				plstypes[p++] = codes[i];
+				/* See above */
+				if((i%2) == 1) {
+					putByte(48+p-1);
+				}
+			} else {
+				putByte('X');
 			}
 		}
 	}
