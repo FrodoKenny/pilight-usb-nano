@@ -55,7 +55,7 @@ char data[BUFFER_SIZE];
 volatile unsigned long ten_us_counter1 = 0;
 volatile uint16_t ten_us_counter = 0, codes[BUFFER_SIZE], plstypes[MAX_PULSE_TYPES];
 volatile uint8_t state = 0, codelen = 0, repeats = 0, pos = 0;
-volatile uint8_t valid_buffer = 0x00, r = 0, q = 0, rawlen = 0, nrpulses = 0, sendspaces = 0;
+volatile uint8_t valid_buffer = 0x00, r = 0, q = 0, rawlen = 0, nrpulses = 0, sendspaces = 1;
 
 void initUART(void) {
   uint16_t x = 0;
